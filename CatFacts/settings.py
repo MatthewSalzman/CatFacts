@@ -128,37 +128,29 @@ CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 
 
 
-# import djcelery
+import djcelery
 
 
-# #CELERY
-# djcelery.setup_loader()
-# CELERY_BROKER_URL = 'amqp://localhost'
-# BROKER_URL = 'amqp://localhost'
-
-
-# BROKER_URL = 'redis://localhost:6379'
-# CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-# CELERY_ACCEPT_CONTENT = ['application/json']
-# CELERY_TASK_SERIALIZER = 'json'
-# CELERY_RESULT_SERIALIZER = 'json'
-
-# CELERY_ENABLE_UTC = False
-# # CELERY_TIMEZONE = 'Americas/New_York'
-
-
-
-# import django
-# django.setup()
-
-
-# import djcelery
-# djcelery.setup_loader()
-
+#CELERY
+djcelery.setup_loader()
+CELERY_BROKER_URL = 'amqp://localhost'
 BROKER_URL = 'amqp://localhost'
-CELERY_RESULT_BACKEND = 'rpc://'
-CELERY_RESULT_PERSISTENT = False
+
+
+BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'America/Sao_Paulo'
+
+CELERY_ENABLE_UTC = False
+# CELERY_TIMEZONE = 'Americas/New_York'
+
+
+
+import django
+django.setup()
+
+
+import djcelery
+djcelery.setup_loader()
