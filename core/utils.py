@@ -10,8 +10,8 @@ from celery import shared_task
 from core.models import Fact, Email, Header, Footer
 
 
-MY_ADDRESS = 'MrFactCat@gmail.com'
-PASSWORD = 'catfacts!'
+MY_ADDRESS = ''
+PASSWORD = ''
 
 
 
