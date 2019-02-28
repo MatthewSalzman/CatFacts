@@ -25,8 +25,6 @@ def send_email(subject, header, fact, footer, email):
     s.starttls()
     s.login(MY_ADDRESS, PASSWORD)
 
-    # For each contact, send the email:
-    # email = 'salzmamj@mail.uc.edu'
 
     msg = MIMEMultipart()       # create a message
 
@@ -73,4 +71,3 @@ def send_email_to_all_users():
 
 
 
-# send_email('catfact! now','Check this out','Did you know, facts are awesome!','Thanks!','salzmamj@mail.uc.edu')
